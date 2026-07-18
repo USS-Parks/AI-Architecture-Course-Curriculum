@@ -45,6 +45,18 @@ The minimum module score is 80 percent. Certain failures are automatic non-passe
 
 The complete course plan is available as [AI Architecture Practitioner Curriculum.docx](curriculum/AI%20Architecture%20Practitioner%20Curriculum.docx).
 
+### Run the learning workspace
+
+The browser workspace turns the complete curriculum into a sequential, self-paced course. It keeps your session goals, notes, evidence, reflections, and gate progress in your browser. Nothing is uploaded.
+
+```powershell
+cd web
+npm install
+npm run dev
+```
+
+Open the localhost address printed in the terminal. Start at Week 0, do the work yourself, and use the **Copy coaching prompt** button when you want the assistant to teach, question, hint, or review. The next unit unlocks only after you record evidence, reflect, and affirm that you can defend the current gate. Export your progress periodically from **My progress**.
+
 Week 0 establishes the laboratory and records an honest starting point:
 
 - [Environment inventory](environment.md)
@@ -79,6 +91,7 @@ architecture-diagrams/      logical, physical, data-flow, and trust views
 runbooks/                   installation, recovery, upgrade, and rollback
 client-training/            operator training and knowledge transfer
 capstone/                   final integrated system and handoff package
+web/                        localhost curriculum and progress workspace
 ```
 
 ## Safety boundary

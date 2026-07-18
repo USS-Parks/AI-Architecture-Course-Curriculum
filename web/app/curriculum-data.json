@@ -1,0 +1,3296 @@
+{
+  "meta": {
+    "title": "AI Architecture Practitioner",
+    "subtitle": "From first principles to secure local deployment and IT handoff",
+    "instructionalWeeks": 60,
+    "totalUnits": 61,
+    "weeklyCommitment": "8-10 hours at the learner's pace",
+    "capstone": "Local Knowledge and Operations Platform"
+  },
+  "phases": [
+    {
+      "id": "orientation",
+      "label": "Orientation",
+      "title": "Establish the laboratory",
+      "moduleIds": [
+        "module-0"
+      ]
+    },
+    {
+      "id": "phase-i",
+      "label": "Phase I",
+      "title": "Computational Foundations",
+      "moduleIds": [
+        "module-1",
+        "module-2",
+        "module-3",
+        "module-4",
+        "module-5"
+      ]
+    },
+    {
+      "id": "phase-ii",
+      "label": "Phase II",
+      "title": "Model Foundations",
+      "moduleIds": [
+        "module-6",
+        "module-7",
+        "module-8",
+        "module-9",
+        "module-10"
+      ]
+    },
+    {
+      "id": "phase-iii",
+      "label": "Phase III",
+      "title": "Enterprise AI Stack",
+      "moduleIds": [
+        "module-11",
+        "module-12",
+        "module-13",
+        "module-14",
+        "module-15"
+      ]
+    },
+    {
+      "id": "phase-iv",
+      "label": "Phase IV",
+      "title": "Client Deployment and IT Handoff",
+      "moduleIds": [
+        "module-16"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-0",
+      "number": 0,
+      "title": "Establish the Laboratory",
+      "phaseId": "orientation",
+      "range": "Week 0",
+      "overview": [],
+      "weeks": [
+        {
+          "id": "week-0",
+          "number": 0,
+          "title": "Establish the Laboratory",
+          "sections": [
+            {
+              "title": "Objective",
+              "items": [
+                "Create a repeatable learning environment and establish an honest baseline."
+              ]
+            },
+            {
+              "title": "Work sequence",
+              "items": []
+            },
+            {
+              "title": "Install or obtain access to a Linux environment",
+              "items": [
+                "Native Linux, a dedicated Linux workstation, a Linux virtual machine, or WSL2."
+              ]
+            },
+            {
+              "title": "Install",
+              "items": [
+                "Git",
+                "Python",
+                "A code editor",
+                "curl",
+                "SSH client",
+                "A package manager",
+                "Create the curriculum repository."
+              ]
+            },
+            {
+              "title": "Record system information",
+              "items": [
+                "Operating system and version",
+                "CPU",
+                "RAM",
+                "Storage",
+                "GPU and VRAM, when present",
+                "Python version"
+              ]
+            },
+            {
+              "title": "Complete four diagnostic tasks",
+              "items": [
+                "Convert decimal numbers to binary and hexadecimal.",
+                "Multiply two small matrices by hand.",
+                "Write a Python program that reads a text file and counts words.",
+                "Explain what happens after a browser sends an HTTP request."
+              ]
+            },
+            {
+              "title": "Write a two-page baseline explanation titled",
+              "items": [
+                "What Happens After a User Presses Send in a Local AI Application?",
+                "Do not research it first. This document becomes the baseline against which you measure later mastery."
+              ]
+            },
+            {
+              "title": "Deliverables",
+              "items": [
+                "Working repository",
+                "environment.md",
+                "Initial architecture diagram",
+                "Baseline explanation",
+                "Skills inventory",
+                "Learning calendar"
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can rebuild the environment from written instructions and clone, run, and modify a small Python project."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": []
+    },
+    {
+      "id": "module-1",
+      "number": 1,
+      "title": "Mathematics for AI Systems",
+      "phaseId": "phase-i",
+      "range": "Weeks 1-5",
+      "overview": [
+        "You do not need to become a pure mathematician. You need enough mathematical fluency to see what the software is doing rather than treating tensors, gradients, and probabilities as incantations.",
+        "Khan Academy is the main mathematics anchor. Use its Linear Algebra, Statistics and Probability, and selected Multivariable Calculus material. Use 3Blue1Brown alongside it for visual understanding of vectors, transformations, calculus, and neural networks. (Khan Academy)"
+      ],
+      "weeks": [
+        {
+          "id": "week-1",
+          "number": 1,
+          "title": "Algebra, functions, exponentials, and logarithms",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Variables and functions",
+                "Function composition",
+                "Exponents and roots",
+                "Logarithms",
+                "Summation notation",
+                "Graphs and rates of change"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A Python notebook plotting linear, polynomial, exponential, and logarithmic functions.",
+                "A table showing how logarithms relate multiplication to addition.",
+                "A simple explanation of why log probabilities are useful when multiplying many small probabilities."
+              ]
+            },
+            {
+              "title": "Exit question",
+              "items": [
+                "Why do exponential and logarithmic functions appear in softmax, loss calculations, probability, and model scaling?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-2",
+          "number": 2,
+          "title": "Vectors, matrices, and dot products",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Scalars, vectors, matrices, and tensors",
+                "Dimensions and shapes",
+                "Vector addition",
+                "Scalar multiplication",
+                "Dot products",
+                "Matrix multiplication",
+                "Transposes",
+                "Broadcasting as a later programming implementation"
+              ]
+            },
+            {
+              "title": "def dot(a, b)",
+              "items": [
+                "..."
+              ]
+            },
+            {
+              "title": "def matrix_multiply(a, b)",
+              "items": [
+                "..."
+              ]
+            },
+            {
+              "title": "def transpose(matrix)",
+              "items": [
+                "...",
+                "Then compare your implementation against NumPy."
+              ]
+            },
+            {
+              "title": "Create a shape ledger for every operation",
+              "items": [
+                "A: [3 × 4]",
+                "B: [4 × 2]",
+                "A × B: [3 × 2]"
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "Given two tensor shapes, you can determine whether matrix multiplication is valid and predict the output shape."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-3",
+          "number": 3,
+          "title": "Linear transformations and geometric interpretation",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Matrices as transformations",
+                "Basis vectors",
+                "Coordinate systems",
+                "Rank",
+                "Linear dependence",
+                "Eigenvectors and eigenvalues at a conceptual level",
+                "Projection and similarity",
+                "3Blue1Brown’s material on vectors, linear transformations, and dot products is particularly useful here. (3Blue1Brown)"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A two-dimensional transformation visualizer.",
+                "Examples of rotation, scaling, shear, and projection.",
+                "A cosine-similarity function.",
+                "A diagram explaining how vector similarity can support semantic search without claiming that the vector itself “understands” the document."
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can explain why a learned linear layer is more than a spreadsheet of arbitrary numbers."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-4",
+          "number": 4,
+          "title": "Derivatives, chain rule, partial derivatives, and gradients",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Derivatives",
+                "Slopes and local change",
+                "Chain rule",
+                "Partial derivatives",
+                "Gradient vectors",
+                "Gradient descent",
+                "Learning rate",
+                "Khan Academy’s multivariable material includes partial derivatives and gradient concepts suitable for this foundation. (Khan Academy)"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Numerical derivative using finite differences.",
+                "Gradient descent for a one-variable function.",
+                "Gradient descent for a two-variable function.",
+                "A visual trace showing how different learning rates converge, oscillate, or diverge."
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can explain the chain rule and how an error signal propagates backward through a sequence of operations."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-5",
+          "number": 5,
+          "title": "Probability, distributions, softmax, and loss",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Probability rules",
+                "Conditional probability",
+                "Expected value",
+                "Variance",
+                "Common distributions",
+                "Sampling",
+                "Likelihood",
+                "Log likelihood",
+                "Entropy",
+                "Cross-entropy",
+                "Softmax"
+              ]
+            },
+            {
+              "title": "def stable_softmax(logits)",
+              "items": [
+                "..."
+              ]
+            },
+            {
+              "title": "def cross_entropy(probabilities, target_index)",
+              "items": [
+                "..."
+              ]
+            },
+            {
+              "title": "Test the effect of",
+              "items": [
+                "Large positive and negative logits",
+                "Different temperatures",
+                "Repeated sampling",
+                "Greedy selection"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Mathematics notebook",
+            "Shape ledger",
+            "Numerical gradient implementation",
+            "Softmax and cross-entropy implementation",
+            "Five-minute client explanation: How a model turns scores into a token choice"
+          ]
+        },
+        {
+          "title": "Module exit gate",
+          "items": []
+        },
+        {
+          "title": "You can",
+          "items": [
+            "Calculate a dot product and matrix product.",
+            "Explain gradients without relying only on a downhill metaphor.",
+            "Explain probability versus confidence.",
+            "Show why softmax does not make a model’s answer factually correct."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "number": 2,
+      "title": "Python, Software Engineering, Git, and SQL",
+      "phaseId": "phase-i",
+      "range": "Weeks 6-9",
+      "overview": [
+        "Use Harvard’s free CS50 Python course for Python fundamentals, selected CS50x material for computer-science foundations, CS50 SQL for relational data, and GitHub Skills for practical Git workflows. CS50P covers functions, exceptions, testing, files, regular expressions, object-oriented programming, and related Python foundations. (edX)"
+      ],
+      "weeks": [
+        {
+          "id": "week-6",
+          "number": 6,
+          "title": "Python execution and data structures",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Variables and types",
+                "Conditions",
+                "Loops",
+                "Functions",
+                "Lists, tuples, dictionaries, and sets",
+                "Imports",
+                "Virtual environments",
+                "Command-line arguments"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A command-line text analyzer.",
+                "A configuration loader.",
+                "A structured logger that writes timestamped events."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-7",
+          "number": 7,
+          "title": "Files, exceptions, tests, and types",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "File handling",
+                "JSON and CSV",
+                "Exceptions",
+                "Unit tests",
+                "Type hints",
+                "Dataclasses",
+                "Input validation",
+                "Dependency management"
+              ]
+            },
+            {
+              "title": "A document-ingestion command that",
+              "items": [
+                "Reads text and JSON files",
+                "Validates metadata",
+                "Rejects malformed files",
+                "Logs errors without crashing the entire batch",
+                "Includes unit tests"
+              ]
+            },
+            {
+              "title": "Failure lab",
+              "items": []
+            },
+            {
+              "title": "Introduce",
+              "items": [
+                "Missing files",
+                "Invalid encoding",
+                "Bad JSON",
+                "Empty documents",
+                "Duplicate identifiers",
+                "Permission errors",
+                "Document how each failure is detected and reported."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-8",
+          "number": 8,
+          "title": "Git and maintainable projects",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Commits",
+                "Branches",
+                "Merges",
+                "Pull requests",
+                ".gitignore",
+                "Tags",
+                "Releases",
+                "Reverting changes",
+                "Code review",
+                "README construction"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Convert the ingestion project into a structured package.",
+                "Add automated tests.",
+                "Tag version v0.1.0.",
+                "Introduce a defect on a branch, diagnose it, and revert or repair it."
+              ]
+            },
+            {
+              "title": "Exit question",
+              "items": [
+                "What is the difference between code version, configuration version, data version, and model version?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-9",
+          "number": 9,
+          "title": "Relational data and service boundaries",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Tables",
+                "Rows and columns",
+                "Primary and foreign keys",
+                "Joins",
+                "Indexes",
+                "Transactions",
+                "Constraints",
+                "SQL injection",
+                "Database migrations",
+                "Basic HTTP and REST concepts"
+              ]
+            },
+            {
+              "title": "A SQLite or PostgreSQL database containing",
+              "items": [
+                "Documents",
+                "Users",
+                "Groups",
+                "Permissions",
+                "Ingestion events",
+                "A small Python service that can create, retrieve, update, and list records."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Tested Python package",
+            "Database schema",
+            "Entity-relationship diagram",
+            "Git history showing deliberate changes",
+            "Error-handling runbook",
+            "Client explanation: Why an AI application still needs ordinary software engineering"
+          ]
+        },
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can trace data through functions, tests, files, and database records, and can identify whether a defect belongs to the code, configuration, data, or environment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "number": 3,
+      "title": "Digital Logic, CPU, Memory, and Data Representation",
+      "phaseId": "phase-i",
+      "range": "Weeks 10-12",
+      "overview": [
+        "Use Nand2Tetris to see how logic gates, arithmetic, memory, machine language, and a computer architecture fit together. Its materials and browser-based development environment allow you to construct much of the stack without physical electronics. (nand2tetris)"
+      ],
+      "weeks": [
+        {
+          "id": "week-10",
+          "number": 10,
+          "title": "Bits, bytes, and numerical representation",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Binary and hexadecimal",
+                "Bits, bytes, words",
+                "Signed and unsigned integers",
+                "Overflow",
+                "Floating-point approximation",
+                "Character encoding",
+                "Endianness",
+                "Bitwise operations"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Integer-to-binary converter.",
+                "Byte-size calculator.",
+                "Floating-point experiment demonstrating rounding.",
+                "File inspector showing the raw bytes behind a short text file."
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can explain why “four-bit model weights” do not mean that every part of the running system uses four-bit numbers."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-11",
+          "number": 11,
+          "title": "Logic gates, arithmetic, and processors",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Boolean logic",
+                "AND, OR, NOT, XOR",
+                "Multiplexers",
+                "Adders",
+                "Registers",
+                "Program counter",
+                "Arithmetic logic unit",
+                "Instruction cycle",
+                "Machine language"
+              ]
+            },
+            {
+              "title": "Build selected Nand2Tetris projects",
+              "items": [
+                "Logic gates",
+                "Adder",
+                "ALU",
+                "Register or memory component",
+                "Simple CPU path",
+                "Do not attempt to memorize gate diagrams. Concentrate on how layers of abstraction are composed."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-12",
+          "number": 12,
+          "title": "Memory hierarchy and CPU–GPU distinction",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Registers",
+                "CPU caches",
+                "System RAM",
+                "Persistent storage",
+                "GPU memory",
+                "Memory bandwidth",
+                "Latency",
+                "Locality",
+                "Data transfer",
+                "Parallel execution",
+                "Why matrix-heavy workloads suit accelerators"
+              ]
+            },
+            {
+              "title": "A diagram showing",
+              "items": [
+                "Disk → system RAM → accelerator memory → compute units"
+              ]
+            },
+            {
+              "title": "A model-memory estimator",
+              "items": [
+                "weight memory ≈ parameter count × bits per parameter ÷ 8"
+              ]
+            },
+            {
+              "title": "A worksheet adding",
+              "items": [
+                "Runtime overhead",
+                "KV cache",
+                "Concurrent requests",
+                "Safety margin"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": []
+        },
+        {
+          "title": "You can accurately distinguish",
+          "items": [
+            "Storage from memory",
+            "RAM from VRAM",
+            "Capacity from bandwidth",
+            "Compute throughput from end-to-end application speed",
+            "Model weight memory from total runtime memory"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "number": 4,
+      "title": "Linux, Processes, Networking, Storage, and Virtualization",
+      "phaseId": "phase-i",
+      "range": "Weeks 13-16",
+      "overview": [
+        "Use the Linux Foundation’s free Introduction to Linux course, MIT’s Missing Semester, Cisco’s Networking Basics material, and MDN’s HTTP documentation. These cover the command line, processes, practical development tools, networking foundations, and request-response behavior. (Linux Foundation - Education)"
+      ],
+      "weeks": [
+        {
+          "id": "week-13",
+          "number": 13,
+          "title": "Linux filesystem, permissions, and processes",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Filesystem hierarchy",
+                "Users and groups",
+                "Ownership and permissions",
+                "Environment variables",
+                "Processes",
+                "Signals",
+                "Pipes and redirection",
+                "Package installation",
+                "SSH",
+                "sudo"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A non-root service account.",
+                "A restricted project directory.",
+                "A Python process that runs under that account.",
+                "A script that records CPU, memory, and disk use."
+              ]
+            },
+            {
+              "title": "Failure lab",
+              "items": []
+            },
+            {
+              "title": "Diagnose",
+              "items": [
+                "Permission denied",
+                "Missing executable",
+                "Wrong path",
+                "Wrong environment variable",
+                "Process terminated",
+                "Disk full"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-14",
+          "number": 14,
+          "title": "Services, logs, and resource management",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Background services",
+                "systemd",
+                "Service dependencies",
+                "Startup and shutdown",
+                "Logs",
+                "File descriptors",
+                "Process limits",
+                "Scheduled jobs",
+                "Time synchronization"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A system service for the earlier Python API.",
+                "Health-check script.",
+                "Restart policy.",
+                "Log-rotation policy.",
+                "Controlled startup and shutdown procedure."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-15",
+          "number": 15,
+          "title": "Networking, DNS, TCP, HTTP, and TLS",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "IP addressing",
+                "Subnets",
+                "Ports",
+                "Routing",
+                "DNS",
+                "TCP versus UDP",
+                "HTTP request and response",
+                "Headers and status codes",
+                "TLS certificates",
+                "Reverse proxies",
+                "Firewalls"
+              ]
+            },
+            {
+              "title": "Build a two-host or two-VM lab",
+              "items": [
+                "Client VM → reverse proxy → application VM"
+              ]
+            },
+            {
+              "title": "Test with",
+              "items": [
+                "ping",
+                "ip",
+                "ss",
+                "curl",
+                "traceroute",
+                "DNS lookup tools",
+                "Firewall logs"
+              ]
+            },
+            {
+              "title": "Failure lab",
+              "items": []
+            },
+            {
+              "title": "Break and repair",
+              "items": [
+                "Wrong port",
+                "Blocked firewall rule",
+                "Failed DNS lookup",
+                "Expired or untrusted certificate",
+                "Service bound only to localhost",
+                "Reverse-proxy routing error"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-16",
+          "number": 16,
+          "title": "Storage, backups, and virtual machines",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Filesystems",
+                "Mounts",
+                "Volumes",
+                "Snapshots",
+                "Backup versus replication",
+                "Recovery-point objective",
+                "Recovery-time objective",
+                "Virtual machines",
+                "Host and guest boundaries",
+                "Network-attached storage",
+                "Encryption at rest"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Backup procedure for application data and configuration.",
+                "Restoration into a fresh VM.",
+                "Evidence that the restored service works.",
+                "Written record of elapsed recovery steps—not merely “backup completed.”"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Network diagram",
+            "Port and protocol matrix",
+            "Linux service runbook",
+            "Backup and restoration report",
+            "Troubleshooting decision tree"
+          ]
+        },
+        {
+          "title": "Phase I exit examination",
+          "items": [
+            "Starting with a file on disk, explain how it becomes bytes in memory, is processed by a running service, sent through a network socket, and returned as an HTTP response."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-5",
+      "number": 5,
+      "title": "Containers, Automation, and Orchestration",
+      "phaseId": "phase-i",
+      "range": "Weeks 17-19",
+      "overview": [
+        "Use Docker’s official hands-on introductory material, Ansible’s documentation, and Kubernetes Basics. Docker’s training covers images, containers, volumes, networking, and Compose; Ansible playbooks provide repeatable machine configuration; Kubernetes Basics introduces deployment, scaling, updating, and debugging of containerized applications. (Docker)"
+      ],
+      "weeks": [
+        {
+          "id": "week-17",
+          "number": 17,
+          "title": "Containers and images",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Image versus container",
+                "Image layers",
+                "Build context",
+                "Container process model",
+                "Port mapping",
+                "Volumes",
+                "Container networks",
+                "Environment variables",
+                "Registry and image tags"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Containerize the Python service.",
+                "Run it without root inside the container.",
+                "Mount persistent data separately.",
+                "Add a health check.",
+                "Record the exact image digest."
+              ]
+            },
+            {
+              "title": "Exit question",
+              "items": [
+                "Which parts of the system are inside the container, which remain on the host, and which persist after the container is deleted?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-18",
+          "number": 18,
+          "title": "Multi-service composition",
+          "sections": [
+            {
+              "title": "Build a Compose stack containing",
+              "items": [
+                "Reverse proxy",
+                "Application API",
+                "Database",
+                "Background ingestion worker",
+                "Health checks",
+                "Persistent volumes",
+                "Internal network",
+                "Configuration files",
+                "Secrets supplied separately from the image"
+              ]
+            },
+            {
+              "title": "Practice",
+              "items": [
+                "Clean installation",
+                "Service restart",
+                "Database migration",
+                "Backup",
+                "Restoration",
+                "Upgrade",
+                "Rollback"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-19",
+          "number": 19,
+          "title": "Configuration automation and orchestration decisions",
+          "sections": [
+            {
+              "title": "Use Ansible to",
+              "items": [
+                "Install required system packages.",
+                "Create service accounts and directories.",
+                "Install or update the container stack.",
+                "Configure firewall rules.",
+                "Deploy versioned configuration.",
+                "Run smoke tests.",
+                "Complete the Kubernetes Basics material, but do not automatically move the capstone to Kubernetes."
+              ]
+            },
+            {
+              "title": "Write a decision record answering",
+              "items": [
+                "Is this a single-host or multi-host service?",
+                "How many services and replicas exist?",
+                "Is automatic rescheduling required?",
+                "Does the client have Kubernetes competence?",
+                "Who will patch and troubleshoot the cluster?",
+                "Is the added operational burden justified?",
+                "My recommendation is direct: master Linux, containers, Compose, and repeatable configuration before adopting Kubernetes. Kubernetes should answer a real operating requirement rather than serve as a mark of sophistication."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": [
+            "A clean Linux host can be configured and brought to a working application state from your repository and runbook."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-6",
+      "number": 6,
+      "title": "Machine-Learning Concepts and Evaluation",
+      "phaseId": "phase-ii",
+      "range": "Weeks 20-22",
+      "overview": [
+        "Use Google’s Machine Learning Crash Course, including its material on fairness and production machine-learning systems. It provides a practical introduction to model training, metrics, generalization, data, and production concerns. (Google for Developers)"
+      ],
+      "weeks": [
+        {
+          "id": "week-20",
+          "number": 20,
+          "title": "Data, features, labels, and baselines",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Supervised and unsupervised learning",
+                "Examples, features, and labels",
+                "Training, validation, and test sets",
+                "Baseline systems",
+                "Data leakage",
+                "Distribution shift",
+                "Missing and malformed data"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A small classification or regression dataset.",
+                "A simple rule-based baseline.",
+                "A train/validation/test split."
+              ]
+            },
+            {
+              "title": "A data card documenting",
+              "items": [
+                "Source",
+                "Intended use",
+                "Known limitations",
+                "Sensitive attributes",
+                "Exclusions",
+                "Licensing"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-21",
+          "number": 21,
+          "title": "Models, loss, and optimization",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Linear regression",
+                "Logistic regression",
+                "Classification",
+                "Loss functions",
+                "Gradient descent",
+                "Learning rate",
+                "Regularization",
+                "Overfitting and underfitting"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "One regression model.",
+                "One classification model.",
+                "Learning curves.",
+                "Comparison against the non-ML baseline."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-22",
+          "number": 22,
+          "title": "Metrics, fairness, and production behavior",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Accuracy",
+                "Precision",
+                "Recall",
+                "F1",
+                "False-positive and false-negative costs",
+                "Confusion matrices",
+                "Calibration",
+                "Subgroup evaluation",
+                "Fairness considerations",
+                "Monitoring after deployment",
+                "Use a practical scenario where the costs are asymmetric. For example, a triage system may impose different harm when it misses a high-risk case than when it flags a low-risk case for human review.",
+                "This does not mean maximizing recall blindly. It means explicitly connecting metrics to consequences, staffing, workflow, and affected populations."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Data card",
+            "Model card",
+            "Baseline comparison",
+            "Metric-selection memorandum",
+            "Subgroup evaluation",
+            "Client explanation: Why model accuracy is not sufficient"
+          ]
+        },
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can choose a metric based on operational consequences and identify overfitting, leakage, and subgroup failures."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-7",
+      "number": 7,
+      "title": "Neural Networks and PyTorch",
+      "phaseId": "phase-ii",
+      "range": "Weeks 23-26",
+      "overview": [
+        "Use PyTorch’s Learn the Basics material, fast.ai’s Practical Deep Learning course, and the free interactive book Dive into Deep Learning. Together they cover tensors, automatic differentiation, training loops, model construction, and practical experimentation. (PyTorch Documentation)"
+      ],
+      "weeks": [
+        {
+          "id": "week-23",
+          "number": 23,
+          "title": "Computation graphs and automatic differentiation",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Before relying on PyTorch autograd, implement a tiny scalar differentiation engine."
+              ]
+            },
+            {
+              "title": "A scalar should record",
+              "items": [
+                "Its value",
+                "Its parents",
+                "The operation that created it",
+                "Its gradient",
+                "A backward function",
+                "Use it to compute and differentiate a small expression."
+              ]
+            },
+            {
+              "title": "Then reproduce the same computation in PyTorch and inspect",
+              "items": [
+                "value.requires_grad",
+                "value.grad",
+                "loss.backward()"
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can distinguish values, operations, gradients, and parameters."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-24",
+          "number": 24,
+          "title": "Tensors, layers, activations, and forward passes",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Tensor shapes",
+                "Batch dimension",
+                "Linear layers",
+                "Bias",
+                "Activation functions",
+                "Model parameters",
+                "Forward pass",
+                "Parameter initialization"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "A multilayer perceptron from explicit tensor operations.",
+                "The same model using PyTorch modules.",
+                "A shape trace for every layer."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-25",
+          "number": 25,
+          "title": "Training loops and diagnosis",
+          "sections": [
+            {
+              "title": "Build a complete training loop",
+              "items": [
+                "Load batch",
+                "→ forward pass",
+                "→ calculate loss",
+                "→ zero gradients",
+                "→ backward pass",
+                "→ optimizer step",
+                "→ record metrics"
+              ]
+            },
+            {
+              "title": "Intentionally introduce",
+              "items": [
+                "Learning rate too high",
+                "Learning rate too low",
+                "Labels in the wrong format",
+                "Inputs on the wrong device",
+                "Incorrect tensor shape",
+                "Missing gradient reset",
+                "Training/evaluation mode error",
+                "Create a troubleshooting guide based on the symptoms."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-26",
+          "number": 26,
+          "title": "Practical neural-network project",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Train a small network on an appropriate public dataset."
+              ]
+            },
+            {
+              "title": "Record",
+              "items": [
+                "Dataset version",
+                "Random seed",
+                "Model configuration",
+                "Parameter count",
+                "Optimizer",
+                "Learning rate",
+                "Batch size",
+                "Training duration",
+                "Evaluation metrics",
+                "Hardware used",
+                "Energy estimate or observed system power where feasible"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": []
+        },
+        {
+          "title": "You can explain and demonstrate",
+          "items": [
+            "Forward propagation",
+            "Loss",
+            "Backpropagation",
+            "Optimizer updates",
+            "Epochs and batches",
+            "Training versus inference",
+            "Why a checkpoint is not the same thing as source code"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-8",
+      "number": 8,
+      "title": "Transformers and Language-Model Internals",
+      "phaseId": "phase-ii",
+      "range": "Weeks 27-31",
+      "overview": [
+        "Use the Hugging Face learning materials, Harvard’s Annotated Transformer, and selected Stanford CS336 material. The Annotated Transformer walks through the original architecture in executable form, while CS336 treats language modeling as a system built from data, tokenization, model components, training, scaling, and evaluation. (Hugging Face)"
+      ],
+      "weeks": [
+        {
+          "id": "week-27",
+          "number": 27,
+          "title": "Tokenization",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Characters, bytes, words, and subwords",
+                "Vocabulary",
+                "Token IDs",
+                "Special tokens",
+                "Byte-pair or related subword methods",
+                "Unknown and rare words",
+                "Tokenization efficiency",
+                "Multilingual and domain-specific effects",
+                "Hugging Face’s tokenizer documentation provides direct access to tokenizer behavior and training concepts. (Hugging Face)"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Train a small tokenizer on a public-domain corpus."
+              ]
+            },
+            {
+              "title": "Inspect how it tokenizes",
+              "items": [
+                "Common English",
+                "Technical terminology",
+                "Names",
+                "Numbers",
+                "URLs",
+                "Indigenous place names, where appropriate source material exists",
+                "Punctuation and whitespace",
+                "Compare token counts between two tokenizers."
+              ]
+            },
+            {
+              "title": "Client explanation",
+              "items": [
+                "Why a “word” and a “token” are not equivalent, and why token counts affect context and operating cost."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-28",
+          "number": 28,
+          "title": "Embeddings and positional information",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Embedding lookup tables",
+                "Hidden dimension",
+                "Learned representations",
+                "Positional encodings or position-dependent methods",
+                "Context order",
+                "Similarity versus symbolic meaning"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Token embedding layer.",
+                "Position embedding layer.",
+                "Visualization of selected vectors.",
+                "Demonstration that removing positional information changes the system’s ability to distinguish order."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-29",
+          "number": 29,
+          "title": "Self-attention",
+          "sections": [
+            {
+              "title": "Implement",
+              "items": [
+                "Q = XWQ",
+                "K = XWK",
+                "V = XWV"
+              ]
+            },
+            {
+              "title": "Then",
+              "items": [
+                "scores = QKᵀ / √d",
+                "masked_scores = scores + causal_mask",
+                "weights = softmax(masked_scores)",
+                "output = weightsV"
+              ]
+            },
+            {
+              "title": "Study",
+              "items": [
+                "Query, key, and value projections",
+                "Scaled dot-product attention",
+                "Causal masking",
+                "Multiple attention heads",
+                "Head dimension",
+                "Attention tensor shapes",
+                "Build single-head attention first, then multi-head attention.",
+                "Do not copy an entire implementation. Write and test each operation separately."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-30",
+          "number": 30,
+          "title": "The Transformer block",
+          "sections": [
+            {
+              "title": "Implement",
+              "items": [
+                "Normalization",
+                "Multi-head causal attention",
+                "Residual connection",
+                "Feed-forward network",
+                "Second residual connection",
+                "Dropout where appropriate",
+                "Repeated layers",
+                "Final vocabulary projection"
+              ]
+            },
+            {
+              "title": "Maintain a shape ledger",
+              "items": [
+                "tokens:             [batch, sequence]",
+                "embeddings:         [batch, sequence, hidden]",
+                "Q/K/V:              [batch, heads, sequence, head_dim]",
+                "attention scores:   [batch, heads, sequence, sequence]",
+                "logits:             [batch, sequence, vocabulary]"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-31",
+          "number": 31,
+          "title": "Generation and KV caching",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Logits",
+                "Greedy decoding",
+                "Temperature",
+                "Top-k",
+                "Top-p",
+                "Repetition controls",
+                "Stop tokens",
+                "Autoregressive decoding",
+                "Prompt prefill",
+                "Decode phase",
+                "KV cache concept",
+                "Context-window limits"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Greedy generator.",
+                "Temperature sampler.",
+                "Top-k sampler.",
+                "Top-p sampler.",
+                "Comparison using fixed random seeds.",
+                "Basic cache demonstration or instrumentation showing why reusing prior key/value states reduces repeated computation."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Tiny decoder-only Transformer",
+            "Tokenizer",
+            "Unit tests for attention and masking",
+            "Parameter-count worksheet",
+            "Shape ledger",
+            "Annotated architecture diagram",
+            "Ten-minute whiteboard explanation"
+          ]
+        },
+        {
+          "title": "Module exit gate",
+          "items": []
+        },
+        {
+          "title": "Starting with a sentence, you can trace",
+          "items": [
+            "Text",
+            "→ token IDs",
+            "→ embeddings",
+            "→ attention",
+            "→ hidden states",
+            "→ logits",
+            "→ sampling",
+            "→ next token",
+            "You can also distinguish architecture, configuration, tokenizer, weights, context, and generated output."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-9",
+      "number": 9,
+      "title": "Training a Language Model From Random Initialization",
+      "phaseId": "phase-ii",
+      "range": "Weeks 32-34",
+      "overview": [
+        "Use selected Stanford CS336 assignments and PyTorch’s distributed documentation. CS336 includes work on data filtering, deduplication, training, scaling, and distributed systems; PyTorch documents data parallelism, fully sharded training, tensor parallelism, and pipeline approaches. (Stanford CS336)"
+      ],
+      "weeks": [
+        {
+          "id": "week-32",
+          "number": 32,
+          "title": "Corpus engineering",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Data collection boundaries",
+                "Licensing and provenance",
+                "File normalization",
+                "Language detection",
+                "Deduplication",
+                "Quality filtering",
+                "Personally identifying information",
+                "Train-validation contamination",
+                "Token-count estimation",
+                "Dataset manifests"
+              ]
+            },
+            {
+              "title": "Build a small public-domain or synthetic corpus pipeline",
+              "items": [
+                "Raw files",
+                "→ validation",
+                "→ normalization",
+                "→ deduplication",
+                "→ tokenization",
+                "→ train/validation split",
+                "→ versioned dataset",
+                "Produce a manifest with hashes and source information."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-33",
+          "number": 33,
+          "title": "Tiny language-model training",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Train your decoder-only Transformer from random initialization.",
+                "Keep it small enough to permit repeated experiments, perhaps roughly one to twenty million parameters depending on available hardware."
+              ]
+            },
+            {
+              "title": "Record",
+              "items": [
+                "Parameter count",
+                "Dataset token count",
+                "Context length",
+                "Batch size",
+                "Gradient accumulation",
+                "Optimizer",
+                "Learning-rate schedule",
+                "Precision",
+                "Checkpoint interval",
+                "Validation loss",
+                "Hardware",
+                "Training time"
+              ]
+            },
+            {
+              "title": "Practice",
+              "items": [
+                "Saving a checkpoint",
+                "Interrupting training",
+                "Resuming correctly",
+                "Comparing two dataset versions",
+                "Detecting overfitting",
+                "Generating sample text at intervals",
+                "The goal is not a useful foundation model. The goal is to see every moving part."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-34",
+          "number": 34,
+          "title": "Distributed-training concepts",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Data parallelism",
+                "Gradient synchronization",
+                "Parameter sharding",
+                "Tensor parallelism",
+                "Pipeline parallelism",
+                "Communication overhead",
+                "Checkpoint coordination",
+                "Node and process failure",
+                "Complete a two-process experiment on CPU or compatible accelerators where possible. The model can be tiny."
+              ]
+            },
+            {
+              "title": "Draw separate diagrams for",
+              "items": [
+                "Data parallelism",
+                "Fully sharded training",
+                "Tensor parallelism",
+                "Pipeline parallelism"
+              ]
+            },
+            {
+              "title": "Memory worksheet",
+              "items": []
+            },
+            {
+              "title": "Estimate separately",
+              "items": [
+                "Model weights",
+                "Gradients",
+                "Optimizer states",
+                "Activations",
+                "Temporary workspaces",
+                "Communication buffers"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can explain precisely what “trained from scratch” means and why training memory is significantly larger than raw weight storage."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-10",
+      "number": 10,
+      "title": "Model Packages, Adaptation, Fine-Tuning, Quantization, and GPU Execution",
+      "phaseId": "phase-ii",
+      "range": "Weeks 35-38",
+      "overview": [
+        "Use Hugging Face’s free post-training course, its TRL documentation, its quantization material, and NVIDIA’s current CUDA programming guide for accelerator concepts. The post-training ecosystem covers supervised fine-tuning and preference-oriented methods; the quantization material explains reduced-precision model representation; the CUDA guide explains the execution and memory model beneath GPU workloads. (Hugging Face)"
+      ],
+      "weeks": [
+        {
+          "id": "week-35",
+          "number": 35,
+          "title": "Model artifact anatomy",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Inspect a real open model package."
+              ]
+            },
+            {
+              "title": "Identify",
+              "items": [
+                "Configuration",
+                "Architecture name",
+                "Weight shards",
+                "Tokenizer vocabulary",
+                "Tokenizer rules",
+                "Special tokens",
+                "Generation configuration",
+                "Quantization metadata",
+                "Model card",
+                "License",
+                "Checksums",
+                "Adapter files, when present"
+              ]
+            },
+            {
+              "title": "Exit gate",
+              "items": [
+                "You can explain why copying “the model file” is not always sufficient to reproduce a deployment."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-36",
+          "number": 36,
+          "title": "Choosing the right intervention",
+          "sections": [
+            {
+              "title": "Build a decision matrix for",
+              "items": [
+                "Prompt changes",
+                "Deterministic application logic",
+                "Retrieval",
+                "Supervised fine-tuning",
+                "Parameter-efficient fine-tuning",
+                "Continued pretraining",
+                "Training from random initialization"
+              ]
+            },
+            {
+              "title": "Evaluate each against",
+              "items": [
+                "Does the knowledge change often?",
+                "Is the problem knowledge or behavior?",
+                "Must answers cite sources?",
+                "Is the information private?",
+                "Is a repeatable format required?",
+                "How much training data exists?",
+                "What evaluation proves improvement?",
+                "Can the intervention be reversed?"
+              ]
+            },
+            {
+              "title": "A central rule",
+              "items": [
+                "Use the least invasive intervention that solves the measured problem."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-37",
+          "number": 37,
+          "title": "Parameter-efficient fine-tuning",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Complete a small supervised fine-tuning or LoRA exercise."
+              ]
+            },
+            {
+              "title": "Compare",
+              "items": [
+                "Base model",
+                "Improved prompt",
+                "Retrieval-supported version, where relevant",
+                "Fine-tuned or adapter-based version",
+                "Use a fixed evaluation set. Do not judge improvement from a few attractive examples."
+              ]
+            },
+            {
+              "title": "Produce",
+              "items": [
+                "Training data specification",
+                "Adapter configuration",
+                "Before-and-after results",
+                "Failure examples",
+                "Rollback procedure"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-38",
+          "number": 38,
+          "title": "Quantization and accelerator behavior",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "FP32, FP16, BF16, FP8, INT8, and low-bit formats",
+                "Weight-only versus broader quantization",
+                "Quantization scales",
+                "Calibration",
+                "Quality tradeoffs",
+                "Kernel compatibility",
+                "GPU thread and memory hierarchy",
+                "Kernel launch",
+                "Data transfer",
+                "Profiling",
+                "Build a benchmark comparing at least two numerical representations or quantization levels:"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Phase II exit examination",
+          "items": []
+        },
+        {
+          "title": "Given a model card and a client requirement, you can defend",
+          "items": [
+            "Why this model was selected",
+            "Why a particular tokenizer and format are required",
+            "Whether retrieval or fine-tuning is appropriate",
+            "Whether quantization is acceptable",
+            "What memory and hardware are required",
+            "How the system will be evaluated before deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-11",
+      "number": 11,
+      "title": "Local Inference and Model Serving",
+      "phaseId": "phase-iii",
+      "range": "Weeks 39-41",
+      "overview": [
+        "Start with llama.cpp, which supports local execution and an HTTP server across a range of hardware. Then use vLLM for GPU-oriented serving and an OpenAI-compatible service interface. (GitHub)",
+        "I recommend learning llama.cpp before a higher-level desktop manager because it exposes model formats, context limits, threads, device offloading, server arguments, and memory behavior more plainly."
+      ],
+      "weeks": [
+        {
+          "id": "week-39",
+          "number": 39,
+          "title": "llama.cpp and GGUF",
+          "sections": [
+            {
+              "title": "Practice",
+              "items": [
+                "Building or installing the runtime",
+                "Downloading and verifying a model",
+                "Loading GGUF",
+                "CPU-only inference",
+                "Partial or full accelerator offload where supported",
+                "Context configuration",
+                "Thread configuration",
+                "HTTP serving",
+                "Streaming",
+                "Stop sequences",
+                "Logging",
+                "Model replacement",
+                "Build a system-service definition for the model server."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-40",
+          "number": 40,
+          "title": "vLLM and concurrent serving",
+          "sections": [
+            {
+              "title": "Where a compatible accelerator is available, practice",
+              "items": [
+                "Model loading",
+                "OpenAI-compatible endpoint",
+                "Streaming",
+                "Request batching",
+                "Concurrent sequences",
+                "Context limits",
+                "Memory utilization controls",
+                "Model and tokenizer selection",
+                "Server health",
+                "Cancellation",
+                "Free notebook services can assist with limited experiments, but free compute resources are not guaranteed and should never be treated as production capacity. (Google Research)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-41",
+          "number": 41,
+          "title": "Performance and capacity engineering",
+          "sections": [
+            {
+              "title": "Measure",
+              "items": [
+                "Model load time",
+                "Time to first token",
+                "Prompt tokens per second",
+                "Output tokens per second",
+                "End-to-end latency",
+                "Queue delay",
+                "RAM and VRAM",
+                "KV-cache use",
+                "Concurrent users",
+                "Request failures",
+                "Accelerator power where available"
+              ]
+            },
+            {
+              "title": "Test",
+              "items": [
+                "One short request",
+                "One long request",
+                "Several concurrent requests",
+                "Long prompt plus long output",
+                "Context overflow",
+                "Cancellation",
+                "Service restart",
+                "Out-of-memory condition",
+                "Model load failure"
+              ]
+            },
+            {
+              "title": "Produce a capacity worksheet separating",
+              "items": [
+                "Model fit",
+                "Context fit",
+                "Concurrency fit",
+                "Latency target",
+                "Throughput target",
+                "Failure reserve"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can explain why a model may load successfully but fail under real concurrency, and why throughput and latency are not interchangeable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-12",
+      "number": 12,
+      "title": "APIs, Data Engineering, Retrieval, and RAG",
+      "phaseId": "phase-iii",
+      "range": "Weeks 42-46",
+      "overview": [
+        "Use FastAPI’s official tutorial for application service construction, CS50 SQL for relational data, Qdrant’s free Essentials course for vector and hybrid retrieval concepts, and Sentence Transformers for embeddings and retrieve-then-rerank patterns. (FastAPI)",
+        "Build this module without a large agent or RAG framework. The abstraction should be yours before a framework conceals it."
+      ],
+      "weeks": [
+        {
+          "id": "week-42",
+          "number": 42,
+          "title": "API and service architecture",
+          "sections": [
+            {
+              "title": "Build an application API with",
+              "items": [
+                "Request validation",
+                "Response schemas",
+                "Error handling",
+                "Timeouts",
+                "Streaming",
+                "Health endpoint",
+                "Readiness endpoint",
+                "Correlation or trace ID",
+                "Configuration management",
+                "Model-service client",
+                "Basic authentication and authorization hooks"
+              ]
+            },
+            {
+              "title": "Draw the boundary between",
+              "items": [
+                "Browser",
+                "Reverse proxy",
+                "Application API",
+                "Model server",
+                "Database",
+                "Retrieval service"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-43",
+          "number": 43,
+          "title": "Document ingestion",
+          "sections": [
+            {
+              "title": "Build an ingestion pipeline",
+              "items": [
+                "File received",
+                "→ file validation",
+                "→ extraction",
+                "→ normalization",
+                "→ document ID",
+                "→ chunking",
+                "→ metadata",
+                "→ permission assignment",
+                "→ embedding",
+                "→ index",
+                "→ ingestion record"
+              ]
+            },
+            {
+              "title": "Metadata should include",
+              "items": [
+                "Source",
+                "Title",
+                "Version",
+                "Effective date",
+                "Owner",
+                "Classification",
+                "Access groups",
+                "Retention category",
+                "Hash",
+                "Ingestion timestamp",
+                "Superseded status",
+                "Test updates and deletions, not only initial insertion."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-44",
+          "number": 44,
+          "title": "Embeddings and vector search",
+          "sections": [
+            {
+              "title": "Study",
+              "items": [
+                "Dense vectors",
+                "Embedding models",
+                "Similarity functions",
+                "Index construction",
+                "Nearest-neighbor retrieval",
+                "Query and document encoding",
+                "Chunk size",
+                "Overlap",
+                "Metadata filters"
+              ]
+            },
+            {
+              "title": "Build",
+              "items": [
+                "Embedding generation",
+                "Vector index",
+                "Top-k retrieval",
+                "Metadata-filtered retrieval",
+                "A small labeled question-to-document test set",
+                "Measure whether the expected source appears in the retrieved results."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-45",
+          "number": 45,
+          "title": "Keyword search, hybrid retrieval, reranking, and permissions",
+          "sections": [
+            {
+              "title": "Compare",
+              "items": [
+                "Keyword retrieval",
+                "Vector retrieval",
+                "Hybrid retrieval",
+                "Retrieval followed by reranking",
+                "Add permission filtering before context reaches the model."
+              ]
+            },
+            {
+              "title": "Test users with different access",
+              "items": [
+                "User A: public documents only",
+                "User B: department documents",
+                "User C: administrative documents"
+              ]
+            },
+            {
+              "title": "Attempt to retrieve a restricted document through",
+              "items": [
+                "Exact title",
+                "Paraphrase",
+                "Similar document",
+                "Prompt injection",
+                "Follow-up question",
+                "Cached conversation",
+                "The test passes only when authorization is enforced independently of the model."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-46",
+          "number": 46,
+          "title": "Grounded generation and RAG evaluation",
+          "sections": [
+            {
+              "title": "Build the full request path",
+              "items": [
+                "Question",
+                "→ identity and permissions",
+                "→ retrieval",
+                "→ reranking",
+                "→ context selection",
+                "→ prompt construction",
+                "→ generation",
+                "→ citation mapping",
+                "→ response"
+              ]
+            },
+            {
+              "title": "Create a failure taxonomy",
+              "items": [
+                "No relevant source exists",
+                "Relevant source exists but was not indexed",
+                "It was indexed but not retrieved",
+                "It was retrieved but ranked too low",
+                "It was supplied but the model ignored it",
+                "The answer misrepresented the source",
+                "Citation points to the wrong passage",
+                "Source is obsolete",
+                "User lacks access",
+                "Question is outside approved scope"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module deliverables",
+          "items": [
+            "Ingestion service",
+            "Search and reranking pipeline",
+            "Permission test suite",
+            "Grounded-answer endpoint",
+            "Citation system",
+            "Retrieval evaluation set",
+            "Data-lineage diagram",
+            "Document lifecycle runbook"
+          ]
+        },
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can distinguish retrieval failure from generation failure and prove that restricted sources cannot reach unauthorized users."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-13",
+      "number": 13,
+      "title": "Tools, Workflows, Agents, and MCP",
+      "phaseId": "phase-iii",
+      "range": "Weeks 47-48",
+      "overview": [
+        "Use Hugging Face’s free Agents course for tool and agent concepts, followed by the official Model Context Protocol architecture and security guidance. (Hugging Face)"
+      ],
+      "weeks": [
+        {
+          "id": "week-47",
+          "number": 47,
+          "title": "Structured tools and deterministic execution",
+          "sections": [
+            {
+              "title": "Build a read-only tool such as",
+              "items": [
+                "get_work_order(work_order_id)",
+                "list_projects(status, district)",
+                "get_document_metadata(document_id)"
+              ]
+            },
+            {
+              "title": "The model may propose a tool call. The application must",
+              "items": [
+                "Parse the proposed call.",
+                "Validate its schema.",
+                "Confirm the tool is allowed.",
+                "Confirm the user is authorized.",
+                "Enforce argument limits.",
+                "Execute with narrow credentials.",
+                "Record the result.",
+                "Return structured output."
+              ]
+            },
+            {
+              "title": "Study",
+              "items": [
+                "JSON schemas",
+                "Tool contracts",
+                "Timeouts",
+                "Retries",
+                "Idempotency",
+                "State",
+                "Error propagation",
+                "Tool-result injection"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-48",
+          "number": 48,
+          "title": "Approval-gated actions and MCP",
+          "sections": [
+            {
+              "title": "Build one synthetic write action",
+              "items": [
+                "draft_work_order(...)"
+              ]
+            },
+            {
+              "title": "Then a separate deterministic approval path",
+              "items": [
+                "approve_and_create_work_order(...)",
+                "The model must not possess unrestricted authority to perform the final action."
+              ]
+            },
+            {
+              "title": "Add",
+              "items": [
+                "Human approval",
+                "Idempotency key",
+                "Audit record",
+                "Rate limit",
+                "Narrow service account",
+                "Revocation or kill switch",
+                "Clear success and failure states"
+              ]
+            },
+            {
+              "title": "Implement or inspect a simple MCP server and map its trust boundaries",
+              "items": [
+                "Host application",
+                "↔ MCP client",
+                "↔ MCP server",
+                "↔ controlled resource"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": []
+        },
+        {
+          "title": "You can demonstrate that",
+          "items": [
+            "Model output is treated as a proposal.",
+            "Authorization is enforced by ordinary software.",
+            "A malicious document cannot silently grant tool privileges.",
+            "Duplicate calls do not create duplicate actions.",
+            "An administrator can disable the tool without disabling the whole model."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-14",
+      "number": 14,
+      "title": "Security, Privacy, and AI Governance",
+      "phaseId": "phase-iii",
+      "range": "Weeks 49-52",
+      "overview": [
+        "Use the OWASP 2025 LLM and GenAI security material, OWASP’s 2026 agentic security work, MITRE ATLAS, and the NIST AI Risk Management Framework and Generative AI Profile. OWASP and MITRE catalog practical attack patterns, while NIST organizes risk work around Govern, Map, Measure, and Manage. (OWASP Gen AI Security Project)"
+      ],
+      "weeks": [
+        {
+          "id": "week-49",
+          "number": 49,
+          "title": "Threat modeling",
+          "sections": [
+            {
+              "title": "Identify",
+              "items": [
+                "Assets",
+                "Actors",
+                "Entry points",
+                "Trust boundaries",
+                "Sensitive data",
+                "Administrative functions",
+                "External dependencies",
+                "High-consequence actions",
+                "Failure and abuse cases"
+              ]
+            },
+            {
+              "title": "Threats should include",
+              "items": [
+                "Prompt injection",
+                "Indirect prompt injection",
+                "Sensitive-data disclosure",
+                "Insecure tool use",
+                "Excessive agency",
+                "Model or dependency tampering",
+                "Unauthorized retrieval",
+                "Denial of service",
+                "Logging leakage",
+                "Supply-chain compromise",
+                "Malicious model files",
+                "Credential theft",
+                "Build data-flow and trust-boundary diagrams."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-50",
+          "number": 50,
+          "title": "Infrastructure and supply-chain security",
+          "sections": [
+            {
+              "title": "Implement or document",
+              "items": [
+                "SSO integration pattern",
+                "Role-based or attribute-based access",
+                "TLS",
+                "Secrets management",
+                "Service accounts",
+                "Network segmentation",
+                "Outbound traffic controls",
+                "Image and package pinning",
+                "Artifact checksums",
+                "Model provenance",
+                "Software bill of materials",
+                "Vulnerability scanning",
+                "Administrative separation",
+                "Patch policy"
+              ]
+            },
+            {
+              "title": "Failure lab",
+              "items": [
+                "Replace a model or container artifact with a modified file and show how integrity verification detects the change."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-51",
+          "number": 51,
+          "title": "Privacy, records, and logging",
+          "sections": [
+            {
+              "title": "Define",
+              "items": [
+                "Data classification",
+                "Approved inputs",
+                "Prohibited inputs",
+                "Prompt retention",
+                "Response retention",
+                "Source-document retention",
+                "Audit retention",
+                "Log redaction",
+                "Deletion process",
+                "Backup retention",
+                "Legal hold process",
+                "Access-review schedule"
+              ]
+            },
+            {
+              "title": "Test whether sensitive information appears in",
+              "items": [
+                "Application logs",
+                "Reverse-proxy logs",
+                "Traces",
+                "Model-server logs",
+                "Error messages",
+                "Database backups",
+                "Evaluation datasets",
+                "Local hosting reduces some external data exposure, but it does not remove internal privacy risk."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-52",
+          "number": 52,
+          "title": "Governance and incident response",
+          "sections": [
+            {
+              "title": "Produce",
+              "items": [
+                "AI-system inventory",
+                "Named system owner",
+                "Named data owner",
+                "Named security owner",
+                "Approved and prohibited use cases",
+                "Model acceptance criteria",
+                "Change-control procedure",
+                "Evaluation requirement",
+                "Rollback authority",
+                "Incident severity levels",
+                "User complaint and correction process",
+                "Decommissioning plan"
+              ]
+            },
+            {
+              "title": "Conduct an incident tabletop",
+              "items": [
+                "A malicious uploaded document influenced the assistant to request an unauthorized tool action, and sensitive content appeared in telemetry."
+              ]
+            },
+            {
+              "title": "Walk through",
+              "items": [
+                "Detection",
+                "Containment",
+                "Credential revocation",
+                "Evidence preservation",
+                "Service restoration",
+                "User notification decision",
+                "Root-cause analysis",
+                "Corrective controls",
+                "Evaluation update",
+                "Return-to-service approval"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Module exit gate",
+          "items": [
+            "You can map concrete controls to concrete risks. “It runs locally” and “the model was instructed not to do that” are not accepted security controls."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-15",
+      "number": 15,
+      "title": "Observability, Evaluation, Reliability, and Energy",
+      "phaseId": "phase-iii",
+      "range": "Weeks 53-55",
+      "overview": [
+        "Use OpenTelemetry for traces, metrics, and logs; Prometheus and Grafana for collection and dashboards; evaluation tools such as Ragas, Hugging Face Evaluate, or MLflow; and the Software Carbon Intensity specification for disciplined energy and carbon accounting. (OpenTelemetry)",
+        "Google’s freely available Site Reliability Engineering books are valuable supplementary reading for service objectives, monitoring, incident management, and sustainable operations. (Google SRE)"
+      ],
+      "weeks": [
+        {
+          "id": "week-53",
+          "number": 53,
+          "title": "End-to-end telemetry",
+          "sections": [
+            {
+              "title": "Instrument",
+              "items": [
+                "Browser request",
+                "→ application",
+                "→ retrieval",
+                "→ reranker",
+                "→ model request",
+                "→ tool call",
+                "→ response"
+              ]
+            },
+            {
+              "title": "Record suitable metadata",
+              "items": [
+                "Trace ID",
+                "Service name",
+                "Model version",
+                "Prompt-token count",
+                "Output-token count",
+                "Retrieval duration",
+                "Model queue time",
+                "Time to first token",
+                "Total duration",
+                "Tool status",
+                "Error category",
+                "Do not place unrestricted prompt and document content into general telemetry."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-54",
+          "number": 54,
+          "title": "Metrics, dashboards, and service objectives",
+          "sections": [
+            {
+              "title": "Build dashboards for",
+              "items": [
+                "Service availability",
+                "Request rate",
+                "Error rate",
+                "Queue depth",
+                "Time to first token",
+                "End-to-end latency",
+                "Tokens per second",
+                "RAM and VRAM",
+                "Accelerator utilization",
+                "Model reloads",
+                "Out-of-memory events",
+                "Retrieval latency",
+                "Empty retrievals",
+                "Citation failures",
+                "Tool failures",
+                "Define service objectives based on the use case, not arbitrary industry numbers."
+              ]
+            },
+            {
+              "title": "Practice diagnosing",
+              "items": [
+                "Slow model generation",
+                "Slow retrieval",
+                "Database contention",
+                "Full disk",
+                "Growing queue",
+                "Accelerator memory exhaustion",
+                "Failing dependency",
+                "Bad model rollout"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-55",
+          "number": 55,
+          "title": "Evaluation regression and environmental accounting",
+          "sections": [
+            {
+              "title": "Create a versioned evaluation suite covering",
+              "items": [
+                "Factual questions with known sources",
+                "Unsupported questions",
+                "Permission boundaries",
+                "Citation correctness",
+                "Structured output",
+                "Tool selection",
+                "Tool arguments",
+                "Refusal behavior",
+                "Prompt injection",
+                "Long-context behavior",
+                "Accessibility and plain-language requirements"
+              ]
+            },
+            {
+              "title": "Run the suite whenever any of these change",
+              "items": [
+                "Model",
+                "Quantization",
+                "Tokenizer",
+                "Prompt",
+                "Retriever",
+                "Reranker",
+                "Chunking strategy",
+                "Tool definition",
+                "Runtime",
+                "Application code"
+              ]
+            },
+            {
+              "title": "Measure, where equipment allows",
+              "items": [
+                "Idle power",
+                "Load power",
+                "Energy per evaluation run",
+                "Energy per 1,000 requests",
+                "Energy per fixed number of generated tokens",
+                "Utilization during peak and off-peak periods",
+                "Record assumptions where direct measurement is impossible.",
+                "The environmental goal is not merely to purchase efficient hardware. It is to avoid unnecessary computation through:",
+                "Smaller fit-for-purpose models",
+                "Sensible context limits",
+                "Caching",
+                "Request batching",
+                "Model routing",
+                "Efficient quantization",
+                "Scheduled nonurgent workloads",
+                "Hardware consolidation without dangerous single points of failure",
+                "Retirement of idle model replicas"
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": [
+        {
+          "title": "Phase III exit examination",
+          "items": [
+            "Given a failed user request, trace it through identity, retrieval, model execution, tools, and telemetry; identify the failed layer; apply a repair; run regression evaluations; and produce an incident record."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-16",
+      "number": 16,
+      "title": "Discovery, Architecture, Deployment, and Knowledge Transfer",
+      "phaseId": "phase-iv",
+      "range": "Weeks 56-60",
+      "overview": [
+        "This final module converts technical competence into client competence."
+      ],
+      "weeks": [
+        {
+          "id": "week-56",
+          "number": 56,
+          "title": "Client discovery and use-case definition",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Conduct a simulated discovery workshop."
+              ]
+            },
+            {
+              "title": "Business and workflow",
+              "items": [
+                "What decision or task is being supported?",
+                "Who performs it now?",
+                "What is slow, expensive, inconsistent, or inaccessible?",
+                "What must remain a human decision?",
+                "What happens when the system is wrong?",
+                "What is the fallback during an outage?"
+              ]
+            },
+            {
+              "title": "Users and access",
+              "items": [
+                "Who will use the system?",
+                "Which users need elevated access?",
+                "Are there elderly users, people with disabilities, field workers, low-bandwidth locations, or users operating under stress?",
+                "Which languages and reading levels must be supported?",
+                "What accessibility standards apply?"
+              ]
+            },
+            {
+              "title": "Data",
+              "items": [
+                "Which systems contain authoritative records?",
+                "Who owns each dataset?",
+                "How frequently does it change?",
+                "Who may access it?",
+                "What retention and deletion obligations exist?",
+                "Are there protected, confidential, personnel, medical, legal, or tribal data concerns?"
+              ]
+            },
+            {
+              "title": "Operations",
+              "items": [
+                "Required hours of operation",
+                "Expected users and concurrency",
+                "Latency expectations",
+                "Backup and recovery requirements",
+                "Patch windows",
+                "Available IT staffing",
+                "Existing identity, logging, and monitoring systems",
+                "Power, cooling, rack, and network capacity"
+              ]
+            },
+            {
+              "title": "Governance",
+              "items": [
+                "Named system owner",
+                "Acceptance authority",
+                "Security reviewer",
+                "Change-control process",
+                "Incident-response authority",
+                "Model-replacement authority",
+                "Decommissioning authority",
+                "Produce a formal use-case and non-use-case statement."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-57",
+          "number": 57,
+          "title": "Architecture and pilot plan",
+          "sections": [
+            {
+              "title": "Produce",
+              "items": [
+                "Context diagram",
+                "Logical architecture",
+                "Physical deployment diagram",
+                "Network diagram",
+                "Data-flow diagram",
+                "Trust-boundary diagram",
+                "Identity and authorization flow",
+                "Storage and backup design",
+                "Capacity model",
+                "Threat model",
+                "Evaluation plan",
+                "Pilot scope",
+                "Rollback plan",
+                "Environmental impact estimate"
+              ]
+            },
+            {
+              "title": "Explain each component in three forms",
+              "items": [
+                "Executive language",
+                "IT administrator language",
+                "Engineer-level detail"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-58",
+          "number": 58,
+          "title": "Deployment and acceptance",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Deploy the capstone onto a clean target environment."
+              ]
+            },
+            {
+              "title": "The final system must include",
+              "items": [
+                "Local model endpoint",
+                "Versioned model and tokenizer",
+                "Application API",
+                "Document ingestion",
+                "Retrieval and reranking",
+                "Source citations",
+                "Document-level permission enforcement",
+                "At least one read-only tool",
+                "At least one approval-gated synthetic action",
+                "TLS",
+                "Secrets separated from source code",
+                "Repeatable configuration",
+                "Backup and restoration",
+                "Telemetry",
+                "Dashboards",
+                "Evaluation suite",
+                "Rollback capability",
+                "Component and model inventory",
+                "Conduct acceptance testing."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-59",
+          "number": 59,
+          "title": "IT onboarding and operating exercises",
+          "sections": [
+            {
+              "title": "System administrator",
+              "items": [
+                "Start and stop services",
+                "Check system health",
+                "Inspect logs",
+                "Rotate credentials",
+                "Apply configuration",
+                "Update containers",
+                "Restore backups",
+                "Roll back a release"
+              ]
+            },
+            {
+              "title": "AI application administrator",
+              "items": [
+                "Add or remove documents",
+                "Rebuild indexes",
+                "Manage access groups",
+                "Run evaluations",
+                "Approve model changes",
+                "Inspect citations",
+                "Diagnose retrieval failures"
+              ]
+            },
+            {
+              "title": "Security administrator",
+              "items": [
+                "Review access",
+                "Disable tools",
+                "Revoke credentials",
+                "Inspect audit events",
+                "Verify model and image integrity",
+                "Respond to a prompt-injection incident"
+              ]
+            },
+            {
+              "title": "Help-desk or user-support staff",
+              "items": [
+                "Recognize expected limitations",
+                "Gather useful problem reports",
+                "Distinguish outage, retrieval, permission, and answer-quality problems",
+                "Escalate appropriately",
+                "Help users find source evidence"
+              ]
+            },
+            {
+              "title": "Run four table exercises",
+              "items": [
+                "Model service will not start.",
+                "Users can log in but cannot retrieve documents.",
+                "A new model is faster but fails important evaluation cases.",
+                "Sensitive content appears in an application trace.",
+                "The trainees—not you—must operate the system."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "week-60",
+          "number": 60,
+          "title": "Capstone defense and handoff",
+          "sections": [
+            {
+              "title": "Overview",
+              "items": [
+                "Deliver the final system and defend it before a mock review panel."
+              ]
+            },
+            {
+              "title": "The panel should ask",
+              "items": [
+                "Why this model?",
+                "Why this quantization?",
+                "Why this inference engine?",
+                "How many users can it support?",
+                "What happens when VRAM is exhausted?",
+                "How are document permissions enforced?",
+                "How do you detect unsupported answers?",
+                "Can a retrieved document command the system?",
+                "What can tools change?",
+                "Who can approve those changes?",
+                "What is logged?",
+                "How is private data removed?",
+                "How is a model upgrade evaluated?",
+                "How is the service restored?",
+                "How is it decommissioned?",
+                "What is the energy cost?",
+                "What is the human fallback?",
+                "What would make you advise against deployment?"
+              ]
+            },
+            {
+              "title": "Your final client package should contain",
+              "items": [
+                "Executive architecture brief",
+                "Detailed logical and physical diagrams",
+                "Data-flow and trust-boundary diagrams",
+                "Hardware and software bill of materials",
+                "Model, tokenizer, adapter, and data inventory",
+                "License and provenance register",
+                "Installation guide",
+                "Configuration guide",
+                "Upgrade and rollback runbook",
+                "Backup and restoration runbook",
+                "Security and privacy plan",
+                "Incident-response plan",
+                "Monitoring and alert guide",
+                "Evaluation and acceptance report",
+                "Capacity and performance report",
+                "Energy and environmental impact note",
+                "IT administrator guide",
+                "User guide",
+                "Training agenda and exercises",
+                "Knowledge-transfer signoff"
+              ]
+            },
+            {
+              "title": "Final exit gate",
+              "items": []
+            },
+            {
+              "title": "A new administrator must be able to",
+              "items": [
+                "Rebuild the service.",
+                "Identify the model and data versions.",
+                "Add and remove governed content.",
+                "Diagnose common failures.",
+                "Restore from backup.",
+                "Roll back an upgrade.",
+                "Run the evaluation suite.",
+                "Disable a dangerous tool.",
+                "Explain the escalation path.",
+                "You may observe, but you should not rescue the administrator at the first difficulty. Any point where the administrator becomes dependent on undocumented knowledge is a handoff defect."
+              ]
+            }
+          ]
+        }
+      ],
+      "closingSections": []
+    }
+  ],
+  "referenceSections": [
+    {
+      "id": "1-program-standard",
+      "title": "1. Program Standard",
+      "groups": [
+        {
+          "title": "What “intimate knowledge” means",
+          "items": [
+            "You do not need to fabricate a semiconductor or rewrite a vendor’s matrix multiplication library. You do need to be able to:",
+            "Trace a request from the user interface down to the accelerator and back.",
+            "Calculate approximate model, context, and concurrency memory requirements.",
+            "Explain what tokenization, embeddings, attention, weights, inference, retrieval, and tool use actually do.",
+            "Implement a small neural network and a tiny Transformer rather than only importing one.",
+            "Train a small language model from random initialization.",
+            "Package, quantize, serve, benchmark, and monitor an existing model.",
+            "Build retrieval without hiding behind a large orchestration framework.",
+            "Enforce permissions independently of the model.",
+            "Prove whether the system works with evaluations rather than demonstrations alone.",
+            "Produce deployment, rollback, backup, restoration, security, and incident runbooks.",
+            "Train the client’s IT personnel until they can run the system without you."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2-the-learning-method",
+      "title": "2. The Learning Method",
+      "groups": [
+        {
+          "title": "Overview",
+          "items": [
+            "Each week follows five activities:",
+            "Every module produces five forms of evidence:",
+            "A working technical artifact.",
+            "An architecture or data-flow diagram.",
+            "A one-page client explanation.",
+            "A troubleshooting or operating runbook.",
+            "A recorded or live teach-back."
+          ]
+        },
+        {
+          "title": "AI-assistant rule",
+          "items": [
+            "Use AI assistance for explanations, hints, code review, test generation, and error interpretation. Do not accept code you cannot explain.",
+            "For every major lab:",
+            "Rebuild the central portion from a blank file.",
+            "Explain each dependency.",
+            "State what enters and leaves every service.",
+            "Identify where credentials and sensitive data appear.",
+            "Predict at least three failure modes.",
+            "Demonstrate recovery from one failure.",
+            "The objective is not to avoid AI assistance. It is to prevent assistance from concealing a knowledge gap."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-the-persistent-capstone",
+      "title": "3. The Persistent Capstone",
+      "groups": [
+        {
+          "title": "Overview",
+          "items": [
+            "You will build one system throughout the program:"
+          ]
+        },
+        {
+          "title": "Local Knowledge and Operations Platform",
+          "items": [
+            "The platform will eventually include:",
+            "Accessible browser interface",
+            "↓",
+            "Reverse proxy and TLS",
+            "↓",
+            "Application API",
+            "↓",
+            "Authentication and authorization",
+            "↓",
+            "Retrieval and document permissions",
+            "↓",
+            "Local model endpoint",
+            "↓",
+            "Read-only tools and approval-gated actions",
+            "↓",
+            "Local databases and document storage",
+            "Cross-cutting:",
+            "telemetry | evaluation | backups | security |",
+            "change control | energy measurement | IT runbooks",
+            "Use public-domain, openly licensed, or synthetic documents during development. Do not use real protected client records while learning.",
+            "A suitable synthetic scenario would be an organizational assistant that can:",
+            "Answer questions from policies, plans, schedules, and standard operating procedures.",
+            "Cite the documents it used.",
+            "Respect department- and document-level permissions.",
+            "Look up synthetic project or work-order records.",
+            "Draft—but not independently authorize—a work order.",
+            "Escalate uncertain or high-consequence questions to a human.",
+            "Maintain an auditable record of system actions.",
+            "It should never be presented as the sole source for evacuation orders, emergency medical decisions, incident command, or other life-safety decisions."
+          ]
+        },
+        {
+          "title": "Repository structure",
+          "items": [
+            "Create this in Week 0 and maintain it through Week 60:",
+            "ai-architecture-practitioner/",
+            "├── README.md",
+            "├── notes/",
+            "├── mathematics/",
+            "├── programming/",
+            "├── computer-systems/",
+            "├── machine-learning/",
+            "├── transformer-from-scratch/",
+            "├── local-inference/",
+            "├── application-stack/",
+            "├── retrieval/",
+            "├── tools-and-agents/",
+            "├── security/",
+            "├── observability/",
+            "├── evaluations/",
+            "├── architecture-diagrams/",
+            "├── runbooks/",
+            "├── client-training/",
+            "└── capstone/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5-major-competency-examinations",
+      "title": "5. Major Competency Examinations",
+      "groups": [
+        {
+          "title": "Examination A — Week 19: Packet to Process",
+          "items": [
+            "Explain and demonstrate:",
+            "Physical hardware",
+            "→ operating system",
+            "→ process",
+            "→ network socket",
+            "→ HTTP request",
+            "→ application",
+            "→ database",
+            "→ response",
+            "You pass when you can diagnose failures at each boundary."
+          ]
+        },
+        {
+          "title": "Examination B — Week 38: Text to Weights to Text",
+          "items": [
+            "Explain and demonstrate:",
+            "Corpus",
+            "→ tokenizer",
+            "→ training examples",
+            "→ forward pass",
+            "→ loss",
+            "→ gradients",
+            "→ optimizer",
+            "→ checkpoint",
+            "→ inference",
+            "→ logits",
+            "→ sampling",
+            "You pass when you can build and train a tiny model rather than only describe one."
+          ]
+        },
+        {
+          "title": "Examination C — Week 55: Request to Audited Response",
+          "items": [
+            "Explain and demonstrate:",
+            "Identity",
+            "→ authorization",
+            "→ application",
+            "→ retrieval",
+            "→ context",
+            "→ model",
+            "→ tool",
+            "→ response",
+            "→ trace",
+            "→ evaluation",
+            "You pass when you can distinguish a model failure from a retrieval, permission, tool, application, or infrastructure failure."
+          ]
+        },
+        {
+          "title": "Examination D — Week 60: Independent Client Ownership",
+          "items": [
+            "You pass when another person can safely operate the stack from your documentation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-scoring-standard",
+      "title": "6. Scoring Standard",
+      "groups": [
+        {
+          "title": "Overview",
+          "items": [
+            "Minimum module score: 80%",
+            "The following are automatic non-passes regardless of total score:",
+            "Unauthorized data reaches a user.",
+            "A write tool bypasses approval.",
+            "A backup cannot be restored.",
+            "A model or data change is deployed without evaluation.",
+            "Credentials are embedded in source code or images.",
+            "The student cannot explain the code responsible for a security boundary.",
+            "A high-consequence system lacks a human fallback.",
+            "The system is represented as authoritative beyond its tested scope."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7-resource-map",
+      "title": "7. Resource Map",
+      "groups": [
+        {
+          "title": "Mathematics",
+          "items": [
+            "Khan Academy Linear Algebra, Statistics and Probability, and selected Multivariable Calculus. (Khan Academy)",
+            "3Blue1Brown for visual intuition. (3Blue1Brown)"
+          ]
+        },
+        {
+          "title": "Programming and computer science",
+          "items": [
+            "CS50 Python. (edX)",
+            "Selected CS50x material. (edX)",
+            "CS50 SQL. (edX)",
+            "GitHub Skills. (GitHub Skills)",
+            "Nand2Tetris. (nand2tetris)"
+          ]
+        },
+        {
+          "title": "Linux, networking, and deployment",
+          "items": [
+            "Linux Foundation Introduction to Linux. (Linux Foundation - Education)",
+            "MIT Missing Semester. (Missing Semester)",
+            "Cisco Networking Basics. (Cisco Networking Academy)",
+            "MDN HTTP documentation. (MDN Web Docs)",
+            "Docker official training. (Docker)",
+            "Ansible documentation. (Ansible Documentation)",
+            "Kubernetes Basics. (Kubernetes)"
+          ]
+        },
+        {
+          "title": "Machine learning and neural networks",
+          "items": [
+            "Google Machine Learning Crash Course. (Google for Developers)",
+            "PyTorch Learn the Basics. (PyTorch Documentation)",
+            "fast.ai Practical Deep Learning. (Practical Deep Learning for Coders)",
+            "Dive into Deep Learning. (Dive into Deep Learning)"
+          ]
+        },
+        {
+          "title": "Transformers and language models",
+          "items": [
+            "Hugging Face learning courses. (Hugging Face)",
+            "Harvard Annotated Transformer. (Harvard NLP)",
+            "Stanford CS336. (Stanford CS336)",
+            "PyTorch distributed tutorials. (PyTorch Documentation)"
+          ]
+        },
+        {
+          "title": "Adaptation and performance",
+          "items": [
+            "Hugging Face post-training course and TRL. (Hugging Face)",
+            "Hugging Face quantization material. (Hugging Face)",
+            "NVIDIA CUDA Programming Guide. (NVIDIA Docs)"
+          ]
+        },
+        {
+          "title": "Local inference and application stack",
+          "items": [
+            "llama.cpp. (GitHub)",
+            "vLLM. (vLLM)",
+            "FastAPI. (FastAPI)",
+            "Qdrant Essentials. (Qdrant)",
+            "Sentence Transformers. (SentenceTransformers)"
+          ]
+        },
+        {
+          "title": "Agents and tools",
+          "items": [
+            "Hugging Face Agents Course. (Hugging Face)",
+            "Model Context Protocol documentation. (Model Context Protocol)"
+          ]
+        },
+        {
+          "title": "Security, governance, and operations",
+          "items": [
+            "OWASP LLM and GenAI Security. (OWASP Gen AI Security Project)",
+            "OWASP Agentic Security. (OWASP Gen AI Security Project)",
+            "MITRE ATLAS. (MITRE ATLAS)",
+            "NIST AI RMF and Generative AI Profile. (NIST)",
+            "OpenTelemetry. (OpenTelemetry)",
+            "Prometheus and Grafana. (Prometheus)",
+            "Google SRE books. (Google SRE)",
+            "Software Carbon Intensity specification. (Green Software Foundation)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8-recommended-specialist-electives",
+      "title": "8. Recommended Specialist Electives",
+      "groups": [
+        {
+          "title": "Overview",
+          "items": [
+            "After the core program, the following electives provide deeper specialization."
+          ]
+        },
+        {
+          "title": "A. GPU kernels and performance engineering — 4 to 6 weeks",
+          "items": [
+            "Study:",
+            "CUDA execution hierarchy",
+            "Shared, global, and local memory",
+            "Kernel fusion",
+            "Memory coalescing",
+            "Profiling",
+            "Attention kernels",
+            "Quantized matrix multiplication",
+            "Build:",
+            "Simple vector-add kernel",
+            "Reduction kernel",
+            "Matrix operation",
+            "Performance comparison against ordinary CPU implementation",
+            "Profiler report",
+            "This is appropriate when you need to diagnose runtime behavior below the inference-engine layer."
+          ]
+        },
+        {
+          "title": "B. Distributed and high-availability AI systems — 4 weeks",
+          "items": [
+            "Study:",
+            "Load balancing",
+            "Queues",
+            "Replication",
+            "Stateful versus stateless services",
+            "Failure domains",
+            "Multi-node model serving",
+            "Shared storage",
+            "Rolling deployments",
+            "Capacity failover",
+            "Disaster recovery",
+            "Build:",
+            "Two model-service replicas",
+            "Health-aware routing",
+            "Failed-node simulation",
+            "Documented failover behavior"
+          ]
+        },
+        {
+          "title": "C. Advanced AI security — 4 weeks",
+          "items": [
+            "Expand the capstone red-team suite:",
+            "Indirect prompt injection",
+            "Poisoned retrieval corpus",
+            "Malicious files",
+            "Tool-argument attacks",
+            "Cross-user data leakage",
+            "Model denial of service",
+            "Dependency compromise",
+            "Privilege escalation",
+            "Audit-log tampering",
+            "Produce evidence that every major control is enforced outside the language model."
+          ]
+        },
+        {
+          "title": "D. Multimodal and field systems — 4 to 6 weeks",
+          "items": [
+            "Study:",
+            "Images, audio, and sensor inputs",
+            "Vision encoders",
+            "Speech recognition",
+            "Local edge inference",
+            "Intermittent connectivity",
+            "Offline synchronization",
+            "Mobile-device constraints",
+            "Accessible voice and visual interfaces",
+            "This becomes particularly relevant for field operations, land management, emergency support, and rural service delivery."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9-your-immediate-week-0-assignment",
+      "title": "9. Your Immediate Week 0 Assignment",
+      "groups": [
+        {
+          "title": "Overview",
+          "items": [
+            "Begin with these five actions:",
+            "Create the curriculum repository and directory structure.",
+            "Record your hardware, operating system, Python, and Git environment.",
+            "Write the baseline explanation of what happens after a user presses Send.",
+            "Complete the four diagnostic exercises.",
+            "Draw the first version of the full stack from physical hardware through governance.",
+            "Do not try to make the first explanation impressive. Make it honest. At Week 60, rewrite the same document. The difference between those two explanations will show, more clearly than any certificate, how much of the architecture you have actually mastered."
+          ]
+        }
+      ]
+    }
+  ]
+}
