@@ -13,14 +13,17 @@ npm run dev
 
 Open the localhost URL printed by the command. The app stores progress in this browser's `localStorage`; use **My progress > Export progress** to make a portable JSON backup.
 
+The same interface is published at [uss-parks.github.io/AI-Architecture-Course-Curriculum](https://uss-parks.github.io/AI-Architecture-Course-Curriculum/). Pushes to `main` that change `web/` automatically rebuild and deploy it through GitHub Actions.
+
 ## Verify it
 
 ```powershell
 npm test
+npm run test:pages
 npm run lint
 ```
 
-`npm test` builds the production bundle and verifies the server-rendered course shell. The curriculum data is generated deterministically from the authoritative Word document:
+`npm test` verifies the localhost production bundle. `npm run test:pages` builds the repository-path static export and checks its assets and curriculum download. The curriculum data is generated deterministically from the authoritative Word document:
 
 ```powershell
 python scripts/generate_curriculum_data.py

@@ -45,6 +45,8 @@ The minimum module score is 80 percent. Certain failures are automatic non-passe
 
 The complete course plan is available as [AI Architecture Practitioner Curriculum.docx](curriculum/AI%20Architecture%20Practitioner%20Curriculum.docx).
 
+**[Open the AI Architecture Practitioner learning app](https://uss-parks.github.io/AI-Architecture-Course-Curriculum/)**
+
 ### Run the learning workspace
 
 The browser workspace turns the complete curriculum into a sequential, self-paced course. It keeps your session goals, notes, evidence, reflections, and gate progress in your browser. Nothing is uploaded.
@@ -92,6 +94,7 @@ runbooks/                   installation, recovery, upgrade, and rollback
 client-training/            operator training and knowledge transfer
 capstone/                   final integrated system and handoff package
 web/                        localhost curriculum and progress workspace
+.github/workflows/          automatic GitHub Pages publication
 ```
 
 ## Safety boundary

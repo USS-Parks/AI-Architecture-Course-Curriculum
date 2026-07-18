@@ -39,6 +39,8 @@ type FlatWeek = CurriculumWeek & {
 };
 
 const STORAGE_KEY = "ai-architecture-practitioner-state-v1";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const CURRICULUM_DOWNLOAD = `${BASE_PATH}/curriculum/AI%20Architecture%20Practitioner%20Curriculum.docx`;
 
 const EMPTY_WEEK: WeekProgress = {
   goal: "",
@@ -506,7 +508,7 @@ function LearnView({
             </button>
             <a
               className="secondary-button"
-              href="/curriculum/AI%20Architecture%20Practitioner%20Curriculum.docx"
+              href={CURRICULUM_DOWNLOAD}
               download
             >
               Download source curriculum
