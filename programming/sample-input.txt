@@ -1,0 +1,2 @@
+Local AI keeps data nearby.
+A small service receives the prompt, retrieves context, and returns an answer.
